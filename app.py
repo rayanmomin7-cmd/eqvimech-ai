@@ -40,8 +40,9 @@ def load_pdfs():
 
 # =========================
 
-with open("apikey.txt", "r") as f:
-    api_key = f.read().strip()
+import os
+
+api_key = os.getenv("GEMINI_API_KEY")
 
 genai.configure(api_key=api_key)
 
