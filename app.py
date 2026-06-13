@@ -213,8 +213,7 @@ with st.spinner("""
 🔍 Searching Knowledge Base...
 🤖 Generating Response...
 """):
-        response = model.generate_content(full_prompt)
-
+    response = model.generate_content(full_prompt)
     answer = response.text
 
     st.session_state.messages.append(
