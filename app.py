@@ -216,6 +216,6 @@ Answer clearly and professionally.
         }
     )
 
-    st.rerun()
+    # st.rerun()
 
 
