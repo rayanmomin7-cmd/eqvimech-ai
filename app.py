@@ -192,7 +192,7 @@ if prompt:
 
     try:
         
-        context = ""
+        context = load_pdfs()
 
         full_prompt = f"""
 You are Eqvimech AI Assistant.
