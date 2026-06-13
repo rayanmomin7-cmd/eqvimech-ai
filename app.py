@@ -50,6 +50,9 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 context = load_pdfs()
 
+st.write("PDF Loaded Length:", len(context))
+st.write(context[:1000])
+
 # =========================
 
 # PAGE SETTINGS
