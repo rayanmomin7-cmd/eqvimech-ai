@@ -188,23 +188,23 @@ if prompt:
     for m in st.session_state.messages:
         conversation += f"{m['role']}: {m['content']}\n"
 
- try:
+try:
 
     context = load_pdfs()
 
     full_prompt = f"""
-    You are Eqvimech AI Assistant.
+You are Eqvimech AI Assistant.
 
-    Use ONLY the information below if relevant.
+Use ONLY the information below if relevant.
 
-    Context:
-    {context}
+Context:
+{context}
 
-    Conversation:
-    {conversation}
+Conversation:
+{conversation}
 
-    Answer clearly and professionally.
-    """
+Answer clearly and professionally.
+"""
 
     with st.spinner("⚙️ Searching Eqvimech Knowledge Base..."):
         response = model.generate_content(full_prompt)
