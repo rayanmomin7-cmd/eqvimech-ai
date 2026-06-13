@@ -188,7 +188,7 @@ if prompt:
     for m in st.session_state.messages:
         conversation += f"{m['role']}: {m['content']}\n"
 
-    context = load_pdfs()
+    # context = load_pdfs()
 
     full_prompt = f"""
 You are Eqvimech AI Assistant.
