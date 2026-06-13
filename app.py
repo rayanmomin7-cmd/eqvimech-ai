@@ -183,12 +183,16 @@ if prompt:
         }
     )
 
-    conversation = ""
+conversation = "\n".join(
+    [f"{m['role']}: {m['content']}"
+     for m in st.session_state.messages[-6:]]
+)
+        # Last 6 messages only
+conversation = "\n".join(
+    [f"{m['role']}: {m['content']}"
+     for m in st.session_state.messages[-6:]]
+)
 
-    for m in st.session_state.messages:
-        conversation += f"{m['role']}: {m['content']}\n"
-
-    # context = load_pdfs()
 
     full_prompt = f"""
 You are Eqvimech AI Assistant.
