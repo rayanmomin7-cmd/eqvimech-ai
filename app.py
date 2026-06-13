@@ -188,8 +188,6 @@ if prompt:
     for m in st.session_state.messages:
         conversation += f"{m['role']}: {m['content']}\n"
 
-try:
-
     context = load_pdfs()
 
     full_prompt = f"""
@@ -220,5 +218,4 @@ Answer clearly and professionally.
 
     st.rerun()
 
-except Exception as e:
-    st.error(f"Error: {e}")
+
