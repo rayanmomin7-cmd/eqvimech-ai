@@ -204,7 +204,11 @@ Conversation:
 Answer clearly and professionally.
 """
 
-    with st.spinner("⚙️ Searching Eqvimech Knowledge Base..."):
+    with st.spinner("""
+📄 Reading Technical Documents...
+🔍 Searching Knowledge Base...
+🤖 Generating Response...
+"""):
         response = model.generate_content(full_prompt)
 
     answer = response.text
