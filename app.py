@@ -194,7 +194,7 @@ conversation = "\n".join(
 )
 
 
-    full_prompt = f"""
+full_prompt = f"""
 You are Eqvimech AI Assistant.
 
 Use ONLY the information below if relevant.
