@@ -50,8 +50,6 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 context = load_pdfs()
 
-st.title("TEST SUCCESS")
-st.write("PDF Loaded Length:", len(context))
 
 # =========================
 
