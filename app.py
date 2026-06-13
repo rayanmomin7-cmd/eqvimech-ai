@@ -1,9 +1,9 @@
 import chromadb
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 
 client = chromadb.PersistentClient(path="db")
 collection = client.get_collection("eqvimech")
-embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+# embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 import streamlit as st
 import google.generativeai as genai
 import os
@@ -186,16 +186,6 @@ if prompt:
         conversation += f"{m['role']}: {m['content']}\n"
 
     try:
-        query_embedding = embed_model.encode(prompt).tolist()
-
-        results = collection.query(
-            query_embeddings=[query_embedding],
-            n_results=3
-        )
-
-        context = "\n\n".join(
-            results["documents"][0]
-        )
 
         full_prompt = f"""
 You are Eqvimech AI Assistant.
