@@ -213,8 +213,16 @@ with st.spinner("""
 🔍 Searching Knowledge Base...
 🤖 Generating Response...
 """):
-    response = model.generate_content(full_prompt)
-    answer = response.text
+    try:
+        response = model.generate_content(full_prompt)
+        answer = response.text
+
+    except Exception:
+        answer = """
+⚠️ AI service limit reached.
+
+Please try again later or contact administrator.
+"""
 
     st.session_state.messages.append(
         {
@@ -223,6 +231,4 @@ with st.spinner("""
         }
     )
 
-    # st.rerun()
-
-
+    st.rerun()
