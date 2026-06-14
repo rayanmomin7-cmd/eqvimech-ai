@@ -129,7 +129,7 @@ st.divider()
 # =========================
 
 if st.button("🗑️ Clear Chat"):
-    st.session_state.messages = []
+    st.session_state.clear()
     st.rerun()
 
 # =========================
